@@ -19,9 +19,9 @@
     "drop:test:db": "dropdb sms-test --if-exists -U postgres -h localhost",
     "create:test:db": "createdb -U postgres -h localhost sms-test",
     "pretest": "yarn drop:test:db && yarn create:test:db && yarn migrate:db",
-    "test": "echo 'Success' && exit 0",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "test:cov": "jest --runInBand --coverage --coverageReporters=text-lcov | coveralls",
+    "test:cov": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest"
   },
