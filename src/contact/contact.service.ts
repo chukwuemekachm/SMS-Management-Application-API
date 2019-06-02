@@ -25,7 +25,7 @@ export class ContactService {
   async get(condition = {}): Promise<Contact[]> {
     try {
       let query = `
-        SELECT name, phone, createdAt
+        SELECT name, phone, createdat
         FROM contact
         WHERE 1=1
       `;

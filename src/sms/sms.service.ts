@@ -25,7 +25,7 @@ export class SmsService {
   async get(condition = {}): Promise<Sms[]> {
     try {
       let query = `
-        SELECT id, sender, receiver, message, status, createdAt
+        SELECT id, sender, receiver, message, status, createdat
         FROM sms
         WHERE 1=1
       `;
